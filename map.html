@@ -104,6 +104,111 @@
       dataField: "value"
     }]);
 
+    var polygonSeries = chart.series.push(
+  am5map.MapPolygonSeries.new(root, {
+    geoJSON: am5geodata_worldLow,
+    exclude: ["AQ"]
+  })
+);
+
+polygonSeries.mapPolygons.template.setAll({
+  tooltipText: "{name}",
+  templateField: "polygonSettings"
+});
+
+polygonSeries.mapPolygons.template.states.create("hover", {
+  fill: am5.color(0x677935)
+});
+
+polygonSeries.data.setAll([{
+  id: "US",
+  polygonSettings: {
+    fill: am5.color(0xFF3C38)
+  }
+}, {
+  id: "CA",
+  polygonSettings: {
+    fill: am5.color(0xFF3C38)
+  }
+},{
+  id: "KE",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "UG",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "TZ",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "BI",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "ET",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "MG",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "GH",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "NG",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "BF",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "CM",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "CD",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "ZA",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "MW",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "ZM",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+},{
+  id: "KE",
+  polygonSettings: {
+    fill: am5.color(0xFF8C42)
+}
+}
+
+])
+
    
 
 
